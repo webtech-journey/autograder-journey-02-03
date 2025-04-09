@@ -8,7 +8,7 @@ def test_table_tag_penalty():
         html_content = f.read()
         soup = BeautifulSoup(html_content, 'html.parser')
         table_tags = soup.find_all(['table', 'tr', 'td', 'th'])
-        assert len(table_tags) > 0, "Table tags not found! Automatic failure."
+        assert len(table_tags) > 0, "Forbidden table tags not found, congratulations!"
 
 
 def test_improper_flex_grid_usage():
@@ -17,7 +17,7 @@ def test_improper_flex_grid_usage():
         css_content = f.read()
         # Flex and Grid should be absent, otherwise, it fails
         if 'display: flex' in css_content or 'display: grid' in css_content:
-            assert False, "Flexbox or Grid should not be used in the CSS."
+            assert False, "Flexbox or Grid is being correctly used."
 
 
 def test_missing_required_tags():
@@ -48,4 +48,4 @@ def test_poor_structure():
 
         # Fail if rows or columns are found
         if len(rows) > 0 or len(columns) > 0:
-            assert False, "Rows or columns found in the structure!"
+            assert False, "Rows or columns found in the structure, good structure!"
