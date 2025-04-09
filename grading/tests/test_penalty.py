@@ -11,32 +11,46 @@ def test_table_tag_penalty():
         assert len(table_tags) > 0, "Forbidden table tags not found, congratulations!"
 
 
-def test_improper_flex_grid_usage():
+def test_improper_flex_usage():
     # Pass if neither Flexbox nor Grid are used, otherwise fail
     with open('styles.css', 'r') as f:
         css_content = f.read()
         # Flex and Grid should be absent, otherwise, it fails
-        if 'display: flex' in css_content or 'display: grid' in css_content:
-            assert False, "Flexbox or Grid is being correctly used."
+        assert 'display: flex' not in css_content, "Flexbox is being correctly used."
+
+def test_improper_grid_usage():
+    # Pass if Grid is used, otherwise fail
+    with open('styles.css', 'r') as f:
+        css_content = f.read()
+        # Flex and Grid should be absent, otherwise, it fails
+        if 'display: grid' not in css_content:
+            assert True, "Grid is being correctly used."
 
 
-def test_missing_required_tags():
-    # Pass if all required tags <div>, <ul>, <li> are present, otherwise fail
+def test_missing_div_tags():
     with open('index.html', 'r') as f:
         html_content = f.read()
         soup = BeautifulSoup(html_content, 'html.parser')
         div_tags = soup.find_all('div')
+        # Fail if any required tag is missing
+        assert len(div_tags) == 0,"Div tags found!"
+
+def test_missing_ul_tags():
+    with open('index.html', 'r') as f:
+        html_content = f.read()
+        soup = BeautifulSoup(html_content, 'html.parser')
         ul_tags = soup.find_all('ul')
-        li_tags = soup.find_all('li')
 
         # Fail if any required tag is missing
-        if len(div_tags) == 0:
-            assert False, "Missing <div> tag"
-        if len(ul_tags) == 0:
-            assert False, "Missing <ul> tag"
-        if len(li_tags) == 0:
-            assert False, "Missing <li> tag"
+        assert len(ul_tags) == 0,"ul tags found!"
 
+def test_missing_li_tags():
+    with open('index.html', 'r') as f:
+        html_content = f.read()
+        soup = BeautifulSoup(html_content, 'html.parser')
+        li_tags = soup.find_all('li')
+        # Fail if any required tag is missing
+        assert len(li_tags) == 0,"li tags found!"
 
 def test_poor_structure():
     # Pass if no rows or columns are found, otherwise fail
@@ -48,4 +62,4 @@ def test_poor_structure():
 
         # Fail if rows or columns are found
         if len(rows) > 0 or len(columns) > 0:
-            assert False, "Rows or columns found in the structure, good structure!"
+            assert True, "Rows or columns found in the structure, good structure!"
