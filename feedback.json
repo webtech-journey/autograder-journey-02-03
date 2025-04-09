@@ -47,15 +47,33 @@
       ]
     },
     {
-      "test_penalty.py::test_improper_flex_grid_usage": [
-        "Flexbox ou Grid não foram usados, eles são obrigatórios para essa atividade.",
-        "Flexbox ou Grid estão sendo usados, parabéns!"
+      "test_penalty.py::test_improper_flex_usage": [
+        "Flexbox não foi usado, ele é obrigatório para essa atividade.",
+        "Flexbox está sendo usado, parabéns!"
       ]
     },
     {
-      "test_penalty.py::test_missing_required_tags": [
-        "Algumas tags obrigatórias estão ausentes, lembre-se de utilizar as tags <div>,<li> e <ul>",
-        "Todas as tags obrigatórias estão presentes."
+      "test_penalty.py::test_improper_grid_usage": [
+        "Grid não foi usado, ele é obrigatório para essa atividade.",
+        "Grid está sendo usado, parabéns!"
+      ]
+    },
+    {
+      "test_penalty.py::test_missing_div_tags": [
+        "O seu HTML não possui tags `div`, lembre-se de utilizá-las como containers para trabalhar com as tabelas.",
+        "Você está fazendo uso das tags `div`, parabéns!"
+      ]
+    },
+    {
+      "test_penalty.py::test_missing_ul_tags": [
+        "O seu HTML não possui tags `ul`, lembre-se de utilizá-las como containers para trabalhar com os conteúdos.",
+        "Você está fazendo uso das tags `ul`, parabéns!"
+      ]
+    },
+    {
+      "test_penalty.py::test_missing_li_tags": [
+        "O seu HTML não possui tags `li`, lembre-se de utilizá-las como containers para trabalhar com os conteúdos.",
+        "Você está fazendo uso das tags `li`, parabéns!"
       ]
     },
     {
