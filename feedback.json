@@ -1,25 +1,25 @@
 {
   "base_tests": [
     {
-      "grading/tests/test_base.py::test_html_file_present": [
+      "test_base.py::test_html_file_present": [
         "O arquivo HTML está presente. Bom trabalho!",
         "O arquivo HTML está ausente. Por favor, verifique se você incluiu o arquivo HTML correto."
       ]
     },
     {
-      "grading/tests/test_base.py::test_css_file_present": [
+      "test_base.py::test_css_file_present": [
         "O arquivo CSS está presente. Excelente!",
         "O arquivo CSS está ausente. Certifique-se de que o arquivo CSS foi incluído corretamente."
       ]
     },
     {
-      "grading/tests/test_base.py::test_div_usage": [
+      "test_base.py::test_div_usage": [
         "Você está utilizando a tag <div> corretamente. Excelente!",
         "A tag <div> está ausente ou mal utilizada. Verifique se está estruturando a página com as tags <div> conforme necessário."
       ]
     },
     {
-      "grading/tests/test_base.py::test_ul_li_usage": [
+      "test_base.py::test_ul_li_usage": [
         "Ótimo! Você está utilizando corretamente as tags <ul> e <li>.",
         "As tags <ul> e/ou <li> estão ausentes. Por favor, use-as para organizar listas em seu HTML."
       ]
@@ -27,13 +27,13 @@
   ],
   "bonus_tests": [
     {
-      "grading/tests/test_bonus.py::test_responsiveness": [
+      "test_bonus.py::test_responsiveness": [
         "Seu design é responsivo! Ótimo trabalho com as media queries.",
         "Sua página não é responsiva. Adicione media queries para garantir que o design se adapte a diferentes tamanhos de tela."
       ]
     },
     {
-      "grading/tests/test_bonus.py::test_creative_design": [
+      "test_bonus.py::test_creative_design": [
         "Excelente uso de elementos criativos! As animações e efeitos de hover estão bem executados.",
         "Faltam elementos criativos como animações ou efeitos de hover. Tente adicionar mais aprimoramentos visuais."
       ]
@@ -41,25 +41,25 @@
   ],
   "penalty_tests": [
     {
-      "grading/tests/test_penalty.py::test_table_tag_penalty": [
+      "test_penalty.py::test_table_tag_penalty": [
         "As tags de tabela foram encontradas, isso causa a reprovação instantânea. Lembre-se de utilizar apenas display Flex e Grid.",
         "Nenhuma tag de tabela foi encontrada, parabéns!"
       ]
     },
     {
-      "grading/tests/test_penalty.py::test_improper_flex_grid_usage": [
+      "test_penalty.py::test_improper_flex_grid_usage": [
         "Flexbox ou Grid não foram usados, eles são obrigatórios para essa atividade.",
         "Flexbox ou Grid estão sendo usados, parabéns!"
       ]
     },
     {
-      "grading/tests/test_penalty.py::test_missing_required_tags": [
+      "test_penalty.py::test_missing_required_tags": [
         "Algumas tags obrigatórias estão ausentes, lembre-se de utilizar as tags <div>,<li> e <ul>",
         "Todas as tags obrigatórias estão presentes."
       ]
     },
     {
-      "grading/tests/test_penalty.py::test_poor_structure": [
+      "test_penalty.py::test_poor_structure": [
         "Nenhuma linha ou coluna foi encontrada, certifique-se de que sua página contenha uma tabela com múltiplas linhas e colunas.",
         "Linhas e colunas presentes na estrutura."
       ]
