@@ -9,7 +9,7 @@
     {
       "test_base.py::test_css_file_present": [
         "O arquivo CSS está presente. Excelente!",
-        "O arquivo CSS está ausente. Certifique-se de que o arquivo CSS foi incluído corretamente."
+        "O arquivo CSS está ausente. Certifique-se de que o arquivo CSS foi incluído corretamente e possui o nome `styles.css`."
       ]
     },
     {
