@@ -8,14 +8,14 @@ def test_css_file_present():
     assert os.path.exists('styles.css'), "CSS file is missing!"
 
 def test_div_usage():
-    with open('index.html', 'r') as f:
+    with open('index.html', 'r',encoding="utf-8") as f:
         html_content = f.read()
         soup = BeautifulSoup(html_content, 'html.parser')
         div_tags = soup.find_all('div')
         assert len(div_tags) > 0, "No <div> tag used in HTML!"
 
 def test_ul_li_usage():
-    with open('index.html', 'r') as f:
+    with open('index.html', 'r',encoding="utf-8") as f:
         html_content = f.read()
         soup = BeautifulSoup(html_content, 'html.parser')
         ul_tags = soup.find_all('ul')
